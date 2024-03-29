@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import "./App.css";
 // routes
@@ -26,7 +26,6 @@ function App() {
           <Route path="*" element={<p>Error 404</p>} />
         </Routes>
       </Router>
-      <FontAwesomeIcon icon={faSearch} />
     </>
   );
 }
