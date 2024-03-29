@@ -57,7 +57,9 @@ const Offer = () => {
                 <p>{offer.product_details[1].TAILLE}</p>
                 <p>{offer.product_details[2].ÉTAT}</p>
                 <p>{offer.product_details[3].COULEUR}</p>
-                <p>{offer.product_details[4].EMPLACEMENT}</p>
+                {offer.product_details[4] && (
+                  <p>{offer.product_details[4].EMPLACEMENT}</p>
+                )}
               </div>
             </div>
             <div className="second-half">

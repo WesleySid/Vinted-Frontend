@@ -1,6 +1,13 @@
 .logo {
   height: 100px;
 }
+button {
+  outline: none;
+  box-shadow: none;
+}
+button:hover {
+  cursor: pointer;
+}
 a {
   text-decoration: none;
 }
@@ -179,4 +186,92 @@ div.first-half {
   color: white;
   border-radius: 10px;
   margin-top: 40px;
+}
+.annonce-carroussel {
+  display: flex;
+  overflow: scroll;
+  width: 450px;
+  overflow-y: hidden; /* Masquer la barre de défilement verticale */
+}
+.annonce-carroussel::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+}
+/* Styles pour la poignée (thumb) de la barre de défilement */
+.annonce-carroussel::-webkit-scrollbar-thumb {
+  background-color: #10acb5; /* Couleur de la poignée */
+  border-radius: 5px;
+}
+.annonce-carroussel img {
+  margin-right: 20px;
+}
+/* SIGNUP SECTION */
+
+.main-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.signup-div {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  width: 280px;
+  margin-top: 200px;
+  margin-right: 150px;
+}
+h3 {
+  font-size: 30px;
+}
+.signupUL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input {
+  margin: 10px;
+  width: 400px;
+  height: 50px;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+  font-size: 16px;
+}
+input::placeholder {
+  color: #cbcccd;
+}
+.signupbutton {
+  height: 50px;
+  width: 400px;
+  background-color: #10acb5;
+  border-color: white;
+  color: white;
+  border-radius: 10px;
+}
+.checkbox {
+  height: 20px;
+}
+.newsletter {
+  font-size: 14px;
+}
+.checkbox-newsletter {
+  display: flex;
+  align-items: center;
+}
+.already-account {
+  background-color: white;
+  border-color: white;
+  box-shadow: none;
+}
+.already-logged {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  justify-content: space-around;
+  height: 200px;
+}
+h5 {
+  font-size: 32px;
 }

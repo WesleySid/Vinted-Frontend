@@ -10,7 +10,7 @@ const Main = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          " https://lereacteur-vinted-api.herokuapp.com/offers"
+          "https://lereacteur-vinted-api.herokuapp.com/offers"
         );
         console.log(response.data);
         setData(response.data.offers);
@@ -43,11 +43,13 @@ const Main = () => {
               >
                 <div className="annonce">
                   <div className="owner">
-                    <img
-                      className="annonce-avatar"
-                      src={offer.owner.account.avatar.url}
-                      alt=""
-                    />
+                    {offer.owner.account.avatar && (
+                      <img
+                        className="annonce-avatar"
+                        src={offer.owner.account.avatar.url}
+                        alt=""
+                      />
+                    )}
                     <p className="owner-desc">{offer.owner.account.username}</p>
                   </div>
                   {offer.product_pictures.length > 0 && (
