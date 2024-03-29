@@ -1,4 +1,4 @@
-import background from "./img/bgvinted.jpg";
+import background from "./img/banner-vited.jpg";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -28,9 +28,12 @@ const Main = () => {
       <main>
         <div className="bg-container">
           <img src={background} alt="" />
+
           <div className="start-selling">
             <p className="Prets">Prêts à faire du tri dans vos placards ?</p>
-            <button>Commencer à vendre</button>
+            <Link to="/publish">
+              <button>Commencer à vendre</button>
+            </Link>
           </div>
         </div>
         <section className="accueil">

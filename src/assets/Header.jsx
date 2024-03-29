@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import logo from "./img/vintedlogo.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const checkAuthentication = () => {
@@ -17,11 +20,16 @@ const Header = () => {
     };
 
     checkAuthentication();
-  }, [isAuthenticated]); // Ajoutez isAuthenticated comme dépendance de l'effet
+  }, []); // Dépendance vide, cet effet se produit une seule fois lors du chargement initial
 
   const handleLogout = () => {
     Cookies.remove("token");
     setIsAuthenticated(false);
+  };
+
+  const handleSearch = (event) => {
+    const term = event.target.value;
+    setSearchTerm(term);
   };
 
   return (
@@ -32,18 +40,26 @@ const Header = () => {
         </Link>
       </div>
       <div className="search-container">
-        <input
-          className="searchbar"
-          type="text"
-          placeholder="Recherchez des articles"
-        />
+        <div className="barre-recherche">
+          <div className="loupe">
+            <span>
+              <FontAwesomeIcon icon={faSearch} />
+            </span>
+          </div>
+          <input
+            className="searchbar"
+            type="text"
+            placeholder="Recherchez des articles"
+            value={searchTerm}
+            onChange={handleSearch}
+          />
+        </div>
         <div className="filtre-header">
           <span>Triez par prix</span>
           <span>
             <input type="checkbox" name="prix-haut/bas" />
           </span>
           <span>Prix entre : </span>
-          <div className="barre-filtre">barre prix</div>
         </div>
       </div>
       <div className="connect">
@@ -64,7 +80,9 @@ const Header = () => {
           </>
         )}
       </div>
-      <button className="Vends">Vend tes articles</button>
+      <Link to="/publish">
+        <button className="Vends">Vend tes articles</button>
+      </Link>
     </div>
   );
 };

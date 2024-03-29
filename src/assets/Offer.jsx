@@ -45,30 +45,90 @@ const Offer = () => {
           <div className="right">
             <div className="first-half">
               <div className="description-produit">
-                <p> {offer.product_price}€</p>
-                <p className="leftdesc">MARQUE </p>
-                <p className="leftdesc">TAILLE</p>
-                <p className="leftdesc">ETAT</p>
-                <p className="leftdesc">COULEUR</p>
-                <p className="leftdesc">EMPLACEMENT</p>
-              </div>
-              <div className="description-detail">
-                <p>{offer.product_details[0].MARQUE}</p>
-                <p>{offer.product_details[1].TAILLE}</p>
-                <p>{offer.product_details[2].ÉTAT}</p>
-                <p>{offer.product_details[3].COULEUR}</p>
-                {offer.product_details[4] && (
-                  <p>{offer.product_details[4].EMPLACEMENT}</p>
-                )}
+                <h2>{offer.product_price}€</h2>
+                <ul>
+                  <li>
+                    <span
+                      className="li-left
+                    "
+                    >
+                      MARQUE
+                    </span>
+                    <span
+                      className="li-right
+                    "
+                    >
+                      {offer.product_details[0].MARQUE}
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      className="li-left
+                    "
+                    >
+                      TAILLE
+                    </span>
+                    <span
+                      className="li-right
+                    "
+                    >
+                      {offer.product_details[1].TAILLE}
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      className="li-left
+                    "
+                    >
+                      ÉTAT
+                    </span>
+                    <span
+                      className="li-right
+                    "
+                    >
+                      {offer.product_details[2].ÉTAT}
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      className="li-left
+                    "
+                    >
+                      COULEUR
+                    </span>
+                    <span
+                      className="li-right
+                    "
+                    >
+                      {offer.product_details[3].COULEUR}
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      className="li-left
+                    "
+                    >
+                      EMPLACEMENT
+                    </span>
+                    {offer.product_details[4] && (
+                      <span
+                        className="li-right
+                      "
+                      >
+                        {offer.product_details[4].EMPLACEMENT}
+                      </span>
+                    )}
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="second-half">
-              <p>{offer.product_name}</p>
-              <p>{offer.product_description}</p>
+              <h2>{offer.product_name}</h2>
+              <p className="li-left">{offer.product_description}</p>
               <div className="annonce-id">
                 <img
                   className="annonce-avatar2"
-                  src={offer.owner.account.avatar.url}
+                  src={offer.owner.account.avatar?.url}
                   alt=""
                 />
                 <p>{offer.owner.account.username}</p>

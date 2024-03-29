@@ -8,6 +8,13 @@ button {
 button:hover {
   cursor: pointer;
 }
+.slider-price {
+  display: flex;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+}
 a {
   text-decoration: none;
 }
@@ -25,34 +32,52 @@ div.search-container {
 div.filtre-header {
   display: flex;
 }
+.barre-recherche {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 .searchbar {
-  height: 40px;
-  width: 500px;
-  border-radius: 5px;
-  margin: 10px;
   background-color: #f5f6f7;
-  border-color: white;
+  border: none;
+  height: 40px;
+  font-family: Open Sans, sans-serif;
+  letter-spacing: 1px;
+  width: 600px;
+}
+.searchbar:focus {
+  outline: none; /* Supprime la bordure de focus */
+}
+.loupe {
+  display: flex;
+  align-items: center;
+
+  background-color: #f5f6f7;
+  height: 40px;
 }
 div.connect button {
-  margin: 10px;
-  border-radius: 5px;
   background-color: white;
-  color: #10acb5;
-  border-color: #10acb5;
-  height: 40px;
-  width: 100px;
+  color: #2baeb7;
+  border: 1px solid #2baeb7;
+  padding: 8px 25px;
+  border-radius: 8px;
   font-size: 12px;
+  flex-shrink: 0;
+  margin-right: 15px;
 }
 .annonce:hover {
   /* Styles de surbrillance */
   background-color: lightgray;
 }
 button.Vends {
-  background-color: #10acb5;
-  color: white;
-  height: 40px;
-  width: 100px;
-  border-radius: 5px;
+  background-color: #2baeb7;
+  color: #fff;
+  border: 1px solid #2baeb7;
+  padding: 8px 25px;
+  border-radius: 8px;
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-right: 15px;
 }
 .bg-container {
   position: relative; /* Assurez-vous que le conteneur est positionné */
@@ -84,11 +109,16 @@ p.Prets {
   font-size: 34px;
 }
 .start-selling button {
+  background-color: #2baeb7;
+  color: #fff;
+  border: 1px solid #2baeb7;
+  padding: 8px 25px;
+  border-radius: 8px;
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-right: 15px;
   height: 50px;
-  width: 200px;
-  background-color: #10acb5;
-  border-color: white;
-  color: white;
+  width: 300px;
 }
 section {
   display: flex;
@@ -134,6 +164,16 @@ div.content {
   justify-content: space-around;
   background-color: #eaedee;
 }
+h2 {
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+.li-left {
+  color: #a0a0a0;
+}
+.li-right {
+  color: #666666;
+}
 div.left img {
   height: 600px;
   width: 450px;
@@ -152,14 +192,14 @@ div.right {
 }
 div.first-half {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   border-bottom: 1px solid lightgrey;
   margin-bottom: 10px; /* ou toute autre valeur de marge souhaitée */
   padding: 20px;
 }
 .second-half {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   height: 200px;
 
   padding: 20px;
@@ -171,6 +211,7 @@ div.first-half {
 }
 .annonce-id {
   display: flex;
+  margin-top: 30px;
 }
 .leftdesc {
   margin: 5px;
@@ -274,4 +315,29 @@ input::placeholder {
 }
 h5 {
   font-size: 32px;
+}
+/* PUBLISH*/
+.publish-main {
+  background-color: #ebedee;
+  display: flex;
+  justify-content: center;
+  height: 800px;
+}
+
+.publish-container {
+  width: 1000px;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+.publish-form {
+  background-color: white;
+  margin-top: 50px;
+}
+.text-input-section {
+  background-color: #fff;
+  box-shadow: 0 0 2px gray;
+  margin: 20px 0;
+}
+.text-input {
+  display: flex;
 }
