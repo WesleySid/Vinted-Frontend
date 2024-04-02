@@ -32,10 +32,12 @@ const Login = () => {
         alert("Authentification réussie !");
         Cookies.set("token", response.data.token, { expires: 7 });
         setIsAuthenticated(true);
-        navigate("/");
+
+        setTimeout(() => {
+          navigate("/");
+        }, 3000); // Délai de 3 secondes avant la redirection
       }
     } catch (error) {
-      console.error("Erreur lors de l'authentification :", error);
       alert(
         "L'authentification a échoué. Veuillez vérifier vos informations d'identification."
       );

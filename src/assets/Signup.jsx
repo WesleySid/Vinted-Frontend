@@ -27,13 +27,13 @@ const Signup = () => {
         username: formData.username,
       };
 
-      console.log("Données du formulaire avant l'envoi :", userData); // console.log pour afficher les données du formulaire
+      console.log("Données du formulaire avant l'envoi :", userData);
 
       const response = await axios.post(
         "http://localhost:3000/signup",
         userData
       );
-      console.log("Réponse du serveur :", response.data); // console.log pour afficher la réponse du serveur
+      console.log("Réponse du serveur :", response.data);
 
       alert("Votre compte a été créé avec succès !");
       Cookies.set("token", response.data.token, { expires: 7 });

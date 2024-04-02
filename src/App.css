@@ -46,7 +46,7 @@ div.filtre-header {
   width: 600px;
 }
 .searchbar:focus {
-  outline: none; /* Supprime la bordure de focus */
+  outline: none;
 }
 .loupe {
   display: flex;
@@ -66,7 +66,6 @@ div.connect button {
   margin-right: 15px;
 }
 .annonce:hover {
-  /* Styles de surbrillance */
   background-color: lightgray;
 }
 button.Vends {
@@ -80,8 +79,9 @@ button.Vends {
   margin-right: 15px;
 }
 .bg-container {
-  position: relative; /* Assurez-vous que le conteneur est positionné */
+  position: relative;
 }
+
 .bg-container img {
   width: 100%;
   height: 460px;
@@ -89,20 +89,21 @@ button.Vends {
   background-size: cover;
   background-position: center;
 }
+
 .start-selling {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute; /* Positionne la div de façon absolue par rapport à son conteneur parent */
+  position: absolute;
   top: 20%; /* Place la div au milieu verticalement */
   left: 10%; /* Place la div au milieu horizontalement */
   height: 270px;
   width: 410px;
   justify-content: space-around;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   border-radius: 3px;
-  z-index: 2; /* Assurez-vous que la div est au-dessus de l'image de fond */
+  z-index: 2;
   background-color: white;
 }
 p.Prets {
@@ -137,7 +138,6 @@ img.annonce-picture {
   height: 360px;
   width: 260px;
 
-  /* Styles de surbrillance */
   background-color: lightgray;
 }
 img.annonce-avatar {
@@ -194,7 +194,7 @@ div.first-half {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid lightgrey;
-  margin-bottom: 10px; /* ou toute autre valeur de marge souhaitée */
+  margin-bottom: 10px;
   padding: 20px;
 }
 .second-half {
@@ -321,9 +321,12 @@ h5 {
   background-color: #ebedee;
   display: flex;
   justify-content: center;
-  height: 1100px;
+  height: 1400px;
 }
-
+.publish-main img {
+  height: 300px;
+  width: 400px;
+}
 .publish-container {
   width: 1000px;
   margin-left: 350px;
@@ -375,4 +378,24 @@ h4 {
   border-radius: 4px;
   color: #fff;
   margin: 50px 0;
+}
+label {
+  font-size: 40px;
+  font-weight: bold;
+  width: 350px;
+}
+label:hover {
+  cursor: pointer;
+  background-color: white;
+}
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+.picture-input-section {
+  background-color: #fff;
+  box-shadow: 0 0 2px gray;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
 }

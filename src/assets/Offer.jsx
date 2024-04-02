@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -23,7 +24,7 @@ const Offer = () => {
       }
     };
     fetchData();
-  }, [id]); // inclure id dans les dépendances pour déclencher le rechargement lorsque l'ID change
+  }, [id]);
 
   if (isLoading) {
     return <div>Chargement...</div>;
@@ -133,7 +134,10 @@ const Offer = () => {
                 />
                 <p>{offer.owner.account.username}</p>
               </div>
-              <button className="buybutton">Acheter</button>
+              <Link to="/payment">
+                {" "}
+                <button className="buybutton">Acheter</button>{" "}
+              </Link>
             </div>
           </div>
         </div>

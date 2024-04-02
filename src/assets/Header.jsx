@@ -20,8 +20,7 @@ const Header = () => {
     };
 
     checkAuthentication();
-  }, []); // Dépendance vide, cet effet se produit une seule fois lors du chargement initial
-
+  }, []);
   const handleLogout = () => {
     Cookies.remove("token");
     setIsAuthenticated(false);
